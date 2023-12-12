@@ -1,0 +1,202 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Background/background_load.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 1 )
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.286275, 0.498039, 0.498039, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="BackgroundLoad" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.24493
+margin_bottom = 2.24487
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer-BG" type="MarginContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer-BG"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="MarginContainer-BG/VBoxContainer"]
+margin_right = 1920.0
+margin_bottom = 357.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control2" type="Control" parent="MarginContainer-BG/VBoxContainer"]
+margin_top = 361.0
+margin_right = 1920.0
+margin_bottom = 718.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer-BG/VBoxContainer/Control2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0, 0, 0.705882 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control4" type="Control" parent="MarginContainer-BG/VBoxContainer"]
+margin_top = 722.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+margin_right = 1920.0
+margin_bottom = 502.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 506.0
+margin_right = 1920.0
+margin_bottom = 538.0
+
+[node name="Control5" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 80.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 80, 32 )
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+visible = false
+margin_left = 84.0
+margin_right = 464.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 380, 32 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_styles/normal = SubResource( 3 )
+text = "Compiling Resources..."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control4" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 1920.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 542.0
+margin_right = 1920.0
+margin_bottom = 574.0
+
+[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_right = 80.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 80, 32 )
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Progress" type="ProgressBar" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+visible = false
+margin_left = 84.0
+margin_right = 684.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 600, 32 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+step = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control4" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 84.0
+margin_right = 1920.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer"]
+margin_top = 578.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}

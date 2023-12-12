@@ -1,0 +1,324 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Textures/128/Left (1).png" type="Texture" id=1]
+[ext_resource path="res://Textures/128/Pause (4).png" type="Texture" id=2]
+[ext_resource path="res://Textures/128/Pause (3).png" type="Texture" id=3]
+[ext_resource path="res://Textures/128/Left (3).png" type="Texture" id=4]
+[ext_resource path="res://Textures/128/Right (1).png" type="Texture" id=5]
+[ext_resource path="res://Textures/128/Pause (1).png" type="Texture" id=6]
+[ext_resource path="res://Textures/128/Jump (4).png" type="Texture" id=7]
+[ext_resource path="res://Textures/128/Down (1).png" type="Texture" id=8]
+[ext_resource path="res://Textures/128/Down (4).png" type="Texture" id=9]
+[ext_resource path="res://Textures/128/UP (3).png" type="Texture" id=10]
+[ext_resource path="res://Textures/128/UP (4).png" type="Texture" id=11]
+[ext_resource path="res://Textures/128/Jump (1).png" type="Texture" id=12]
+[ext_resource path="res://Textures/128/Right (3).png" type="Texture" id=13]
+[ext_resource path="res://Textures/128/Exit (1).png" type="Texture" id=14]
+[ext_resource path="res://Textures/128/Exit (4).png" type="Texture" id=15]
+[ext_resource path="res://Textures/128/Exit (2).png" type="Texture" id=16]
+[ext_resource path="res://Scenes/Buttons.gd" type="Script" id=17]
+[ext_resource path="res://Textures/128/bUTTON (1).png" type="Texture" id=18]
+[ext_resource path="res://Textures/128/bUTTON (3).png" type="Texture" id=19]
+[ext_resource path="res://Textures/128/bUTTON (2).png" type="Texture" id=20]
+[ext_resource path="res://Textures/Font/new_theme.tres" type="Theme" id=21]
+[ext_resource path="res://Textures/128/bUTTON (4).png" type="Texture" id=22]
+[ext_resource path="res://Textures/128/Full (1).png" type="Texture" id=23]
+[ext_resource path="res://Textures/128/Full (4).png" type="Texture" id=24]
+[ext_resource path="res://Textures/128/Full (2).png" type="Texture" id=25]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 17 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+margin_right = 1920.0
+margin_bottom = 135.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer3"]
+margin_right = 128.0
+margin_bottom = 135.0
+rect_min_size = Vector2( 128, 135 )
+
+[node name="Exit" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer3/Control"]
+pause_mode = 2
+margin_right = 128.0
+margin_bottom = 135.0
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 14 )
+texture_hover = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control2" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 132.0
+margin_right = 1788.0
+margin_bottom = 135.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Fullscreen" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer3/Control2"]
+visible = false
+margin_right = 128.0
+margin_bottom = 135.0
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control3" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 1792.0
+margin_right = 1920.0
+margin_bottom = 135.0
+rect_min_size = Vector2( 128, 135 )
+
+[node name="Pause" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer3/Control3"]
+pause_mode = 2
+margin_right = 128.0
+margin_bottom = 135.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxMenu" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+pause_mode = 2
+margin_top = 139.0
+margin_right = 1920.0
+margin_bottom = 802.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu"]
+margin_right = 1920.0
+margin_bottom = 663.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -250.0
+margin_right = 400.0
+margin_bottom = 250.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.0588235, 0.180392, 0.290196, 0.705882 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control/ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -143.0
+margin_top = -164.0
+margin_right = 154.0
+margin_bottom = 192.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control/ColorRect/CenterContainer"]
+margin_right = 297.0
+margin_bottom = 356.0
+
+[node name="Resume" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control/ColorRect/CenterContainer/HBoxContainer"]
+margin_right = 297.0
+margin_bottom = 116.0
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 22 )
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control/ColorRect/CenterContainer/HBoxContainer/Resume"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 21 )
+custom_colors/font_color = Color( 0, 0, 0, 0.705882 )
+text = "resume"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenu" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control/ColorRect/CenterContainer/HBoxContainer"]
+margin_top = 120.0
+margin_right = 297.0
+margin_bottom = 236.0
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 22 )
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control/ColorRect/CenterContainer/HBoxContainer/MainMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 21 )
+custom_colors/font_color = Color( 0, 0, 0, 0.705882 )
+text = "main menu"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control/ColorRect/CenterContainer/HBoxContainer"]
+margin_top = 240.0
+margin_right = 297.0
+margin_bottom = 356.0
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 22 )
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control/ColorRect/CenterContainer/HBoxContainer/Restart"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 21 )
+custom_colors/font_color = Color( 0, 0, 0, 0.705882 )
+text = "RESTART"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer3" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control/ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -242.0
+margin_top = 25.0
+margin_right = 242.0
+margin_bottom = 52.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control/ColorRect/HBoxContainer3"]
+margin_right = 484.0
+margin_bottom = 52.0
+theme = ExtResource( 21 )
+pressed = true
+keep_pressed_outside = true
+text = "TOUCH  BUTTONS"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+pause_mode = 1
+margin_top = 806.0
+margin_right = 1920.0
+margin_bottom = 941.0
+
+[node name="Control" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 64.0
+margin_bottom = 135.0
+rect_min_size = Vector2( 64, 135 )
+
+[node name="Control2" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 68.0
+margin_right = 196.0
+margin_bottom = 135.0
+rect_min_size = Vector2( 128, 135 )
+
+[node name="Jump" type="TouchScreenButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/Control2"]
+normal = ExtResource( 7 )
+pressed = ExtResource( 12 )
+action = "Jump"
+
+[node name="Control3" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 200.0
+margin_right = 1920.0
+margin_bottom = 135.0
+rect_min_size = Vector2( 0, 135 )
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+pause_mode = 1
+margin_top = 945.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+
+[node name="Control" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_right = 256.0
+margin_bottom = 135.0
+rect_min_size = Vector2( 256, 135 )
+
+[node name="Right" type="TouchScreenButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2/Control"]
+position = Vector2( 128, 0 )
+normal = ExtResource( 13 )
+pressed = ExtResource( 5 )
+action = "ui_right"
+
+[node name="Left" type="TouchScreenButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2/Control"]
+normal = ExtResource( 4 )
+pressed = ExtResource( 1 )
+action = "ui_left"
+
+[node name="Control2" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 260.0
+margin_right = 1660.0
+margin_bottom = 135.0
+rect_min_size = Vector2( 0, 135 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control3" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 1664.0
+margin_right = 1920.0
+margin_bottom = 135.0
+rect_min_size = Vector2( 256, 135 )
+
+[node name="UP" type="TouchScreenButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2/Control3"]
+normal = ExtResource( 11 )
+pressed = ExtResource( 10 )
+action = "ui_up"
+
+[node name="Down" type="TouchScreenButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2/Control3"]
+position = Vector2( 128, 0 )
+normal = ExtResource( 8 )
+pressed = ExtResource( 9 )
+action = "ui_down"
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer3/Control/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer3/Control2/Fullscreen" to="." method="_on_Fullscreen_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer3/Control3/Pause" to="." method="_on_Pause_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control/ColorRect/CenterContainer/HBoxContainer/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control/ColorRect/CenterContainer/HBoxContainer/MainMenu" to="." method="_on_MainMenu_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control/ColorRect/CenterContainer/HBoxContainer/Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxMenu/Control/ColorRect/HBoxContainer3/CheckBox" to="." method="_on_CheckBox_pressed"]

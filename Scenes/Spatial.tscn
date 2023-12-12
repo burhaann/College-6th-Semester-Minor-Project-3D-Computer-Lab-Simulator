@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Final2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Characters/fps/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/128.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/FPenvironment.tres" type="Environment" id=4]
+[ext_resource path="res://Scenes/GiPro.tres" type="GIProbeData" id=5]
+[ext_resource path="res://Scenes/new_bakedlightmapdata.tres" type="BakedLightmapData" id=6]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Final2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.848391, 1.19209e-07, -2.41558 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.35766, 1.3009, -10.2502 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 4 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.83344, 0 )
+
+[node name="GIProbe" type="GIProbe" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.945769, 1.51292, -2.52841 )
+extents = Vector3( 5.47388, 1.86535, 10.6434 )
+data = ExtResource( 5 )
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.798978, 1.56164, -2.67062 )
+extents = Vector3( 5.91969, 2.0454, 11.3729 )
+interior_enable = true
+interior_ambient_color = Color( 1, 1, 1, 1 )
+interior_ambient_energy = 0.75
+
+[node name="Node2D" parent="." instance=ExtResource( 3 )]
+
+[node name="BakedLightmap" type="BakedLightmap" parent="."]
+quality = 3
+capture_quality = 2
+light_data = ExtResource( 6 )
